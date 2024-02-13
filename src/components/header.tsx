@@ -47,7 +47,7 @@ const Header = () => {
 					>
 						<div className='ml-[1rem] sm:ml-0 mr-2 w-[6rem] sm:w-[7rem] h-auto'>
 							<Image
-								src='/logo.PNG'
+								src='/logo.png'
 								alt='logo'
 								width={135}
 								height={81}

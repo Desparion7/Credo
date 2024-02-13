@@ -11,7 +11,7 @@ const ContactMap = () => {
 				<div className='xl:w-[50%] flex flex-col items-center lg:items-start font-semibold'>
 					<div className='ml-[1rem] sm:ml-0 mr-2 w-[6rem] sm:w-[7rem] h-auto'>
 						<Image
-							src='/logo.PNG'
+							src='/logo.png'
 							alt='logo'
 							width={135}
 							height={81}
