@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa';
 
 const ComentsSection = () => {
 	return (
-		<section className='relative my-10 w-[100vw] h-[65vh]'>
+		<section className='relative my-10 w-[100vw] h-[65vh] overflow-hidden'>
 			<Image
 				src='/trip.jpg'
 				alt='Zdjęcie pary podróżników w górach'

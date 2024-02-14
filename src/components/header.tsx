@@ -23,13 +23,8 @@ const Header = () => {
 	};
 
 	return (
-		<motion.header
-			className='flex sticky sm:justify-center justify-between w-[100%] h-[12vh] sm:h-[9vh] z-10 top-0 mt-1  text-white bg-white'
-			variants={{
-				visible: { y: 0 },
-				hidden: { y: -200 },
-			}}
-			transition={{ duration: 0.5, ease: 'easeInOut' }}
+		<header
+			className='flex sticky sm:justify-center justify-between w-[100%] h-[12vh] sm:h-[9vh] z-10 top-0 pt-1   bg-white'
 		>
 			<motion.nav
 				className='sm:container flex justify-between items-center py-2 w-[100vw]'
@@ -91,7 +86,7 @@ const Header = () => {
 				handleToggleMenu={handleToggleMenu}
 				menuVisible={menuVisible}
 			/>
-		</motion.header>
+		</header>
 	);
 };
 

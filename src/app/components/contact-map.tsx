@@ -24,10 +24,10 @@ const ContactMap = () => {
 					<div className='flex gap-2 my-2 items-center'>
 						<FaMapMarkerAlt className='text-3xl' />
 						<div className='text-center lg:text-start'>
-							<p className='text-lg'>
+							<p className='md:text-lg'>
 								38-400 Krosno ul. Podwale 57
 							</p>
-							<p className='text-lg'>
+							<p className='md:text-lg mt-1'>
 								Biuro czynne: Poniedziałek – Piątek, 8:00 –
 								16:00
 							</p>
@@ -42,7 +42,7 @@ const ContactMap = () => {
 					</div>
 					<div className='flex gap-3 my-2'>
 						<MdOutlineMailOutline className='text-2xl' />
-						<p className='text-lg'>biuro@credokrosno.pl</p>
+						<p className='md:text-lg'>biuro@credokrosno.pl</p>
 					</div>
 				</div>
 				<iframe

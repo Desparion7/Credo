@@ -1,10 +1,20 @@
+'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const CompanyShortDescription = () => {
 	return (
-		<section className='relative container mx-auto my-10 xl:my-20 w-[100%] px-2 '>
+		<motion.section
+			className=' container mx-auto my-10 xl:my-20  px-2 '
+			initial={{ opacity: 0, translateY: '50px' }}
+			whileInView={{ opacity: 1, translateY: '0' }}
+			transition={{ ease: 'easeOut', duration: 0.4 }}
+			viewport={{
+				once: true,
+			}}
+		>
 			<h2 className='text-xl xl:text-3xl font-semibold text-center lg:text-start'>
-				Biuro pielgrzymkowo - turystyczne Credo
+				Biuro Pielgrzymkowo - Turystyczne CREDO
 			</h2>
 			<p className='xl:text-xl mt-5 text-center lg:text-start'>
 				Jesteśmy zespołem pasjonatów podróży, których misją jest
@@ -24,7 +34,7 @@ const CompanyShortDescription = () => {
 				Budapeszcie, Wiedniu oraz atrakcyjne wycieczki po Słowacji. Na
 				życzenie klienta przygotowujemy również imprezy specjalistyczne.
 			</p>
-		</section>
+		</motion.section>
 	);
 };
 

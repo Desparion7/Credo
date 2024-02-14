@@ -5,8 +5,8 @@ import { FaMobileScreen } from 'react-icons/fa6';
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 	return (
-		<footer className=' min-w-[100%] z-11 py-2 lg:py-4 bg-main-color text-second-color'>
-			<div className='container flex flex-col sm:flex-row text-sm lg:text-lg justify-between mx-10 sm:mx-20 text-center w-[100%]'>
+		<footer className=' z-11 py-2 lg:py-4 bg-main-color text-second-color'>
+			<div className='custom:container flex flex-col sm:flex-row text-sm lg:text-lg justify-between mx-10 sm:mx-20 text-center '>
 				<p>{currentYear} Credo All rights reserved</p>
 				<p className=''>
 					Strona wykonana przez firme Modezp{' '}
