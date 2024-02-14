@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { LinkButton } from '../components/actual-trips';
 import Link from 'next/link';
@@ -28,15 +28,17 @@ const Offert = () => {
 					once: true,
 				}}
 			>
-				<div className='flex flex-col items-center gap-3 lg:justify-end lg:items-start'>
-					<h2 className='text-xl xl:text-3xl font-semibold'>
-						{tripType
-							? tripType
-									.replace(/-/g, ' ')
-									.replace(/^\w/, (c) => c.toUpperCase())
-							: 'Wszystkie wyjazdy'}
-					</h2>
-				</div>
+				<Suspense fallback={<div>Loading...</div>}>
+					<div className='flex flex-col items-center gap-3 lg:justify-end lg:items-start'>
+						<h2 className='text-xl xl:text-3xl font-semibold'>
+							{tripType
+								? tripType
+										.replace(/-/g, ' ')
+										.replace(/^\w/, (c) => c.toUpperCase())
+								: 'Wszystkie wyjazdy'}
+						</h2>
+					</div>
+				</Suspense>
 				<div className='flex flex-col justify-center items-center lg:items-start gap-3'>
 					<Link href='/oferta'>
 						<motion.button

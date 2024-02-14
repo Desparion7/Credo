@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Intro = () => {
 	return (
-		<section className='relative flex bg-black justify-center items-center w-[100%] h-[88vh] sm:h-[65vh] bg-opacity-0'>
+		<section className='relative flex bg-black justify-center items-center w-[100%] h-[88vh] sm:h-[65vh] bg-opacity-20'>
 			<Image
 				src='/test.jpg'
 				alt='Zdjęcie świątyni w Licheniu'
