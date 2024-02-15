@@ -8,10 +8,12 @@ const CountryShort = ({
 	children,
 	link,
 	imageSrc,
+	short,
 }: {
 	children: React.ReactNode;
 	link: string;
 	imageSrc: string;
+	short: string;
 }) => {
 	return (
 		<div>
@@ -38,7 +40,7 @@ const CountryShort = ({
 					{children}
 				</p>
 			</Link>
-			<p>3 wycieczki</p>
+			<p>{short}</p>
 		</div>
 	);
 };
@@ -46,57 +48,65 @@ const CountryShort = ({
 const DirectionTrip = () => {
 	return (
 		<section className='relative container mx-auto w-[100%] px-2 xl:px-5'>
-			<div className='flex flex-col justify-between gap-5 overflow-hidden'>
-				<motion.div
-					className='flex flex-col gap-3 justify-end border-b-2 border-b-main-color pb-2'
-					initial={{ opacity: 0, translateY: '50px' }}
-					whileInView={{ opacity: 1, translateY: '0' }}
-					transition={{ ease: 'easeOut', duration: 0.5 }}
-					viewport={{
-						once: true,
-					}}
-				>
-					<h2 className='text-xl xl:text-3xl font-semibold text-center lg:text-start'>
-						Kierunki wycieczek
-					</h2>
-					<p className='xl:text-xl text-center lg:text-start'>
-						Przeglądaj oferty wyjazdów według krajów
-					</p>
-				</motion.div>
+			<div className='flex flex-col justify-between gap-5 '>
+				<div className='overflow-hidden'>
+					<motion.div
+						className='flex flex-col gap-3 justify-end border-b-2 border-b-main-color pb-2 '
+						initial={{ opacity: 0, translateY: '50px' }}
+						whileInView={{ opacity: 1, translateY: '0' }}
+						transition={{ ease: 'easeOut', duration: 0.5 }}
+						viewport={{
+							once: true,
+						}}
+					>
+						<h2 className='text-xl xl:text-3xl font-semibold text-center lg:text-start'>
+							Kierunki wycieczek
+						</h2>
+						<p className='xl:text-xl text-center lg:text-start'>
+							Przeglądaj oferty wyjazdów według krajów
+						</p>
+					</motion.div>
+				</div>
 				<div className='grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-5 gap-3 xl:gap-10 justify-items-center'>
 					<CountryShort
-						link={'/oferta?kraje=polska'}
+						link={'/oferta?rodzaj=Polska'}
 						imageSrc={'/kraje/polska.jpg'}
+						short={'Poznaj lepiej nasz kraj'}
 					>
 						Polska
 					</CountryShort>
 					<CountryShort
-						link={'/oferta?kraje=wlochy'}
+						link={'/oferta?rodzaj=Włochy'}
 						imageSrc={'/kraje/wlochy.jpg'}
+						short={'Dom Watykanu i świętych miejsc'}
 					>
 						Włochy
 					</CountryShort>
 					<CountryShort
-						link={'/oferta?kraje=chorwacja'}
+						link={'/oferta?rodzaj=Chorwacja'}
 						imageSrc={'/kraje/chorwacja.jpg'}
+						short={'Starożyte katedry, średniowieczne kościoły'}
 					>
 						Chorwacja
 					</CountryShort>
 					<CountryShort
-						link={'/oferta?kraje=bosnia'}
+						link={'/oferta?rodzaj=Bośnia i Hercegowina'}
 						imageSrc={'/kraje/bosnia.jpg'}
+						short={'Unikalne doświadczenie duchowe'}
 					>
 						Bośnia i Hercegowina
 					</CountryShort>
 					<CountryShort
-						link={'/oferta?kraje=potrugalia'}
+						link={'/oferta?rodzaj=Portugalia'}
 						imageSrc={'/kraje/portugalia.jpg'}
+						short={'Portugalia ze słynnym sanktuarium w Fatimie'}
 					>
 						Portugalia
 					</CountryShort>
 					<CountryShort
-						link={'/oferta?kraje=polska'}
+						link={'/oferta?rodzaj=Litwa'}
 						imageSrc={'/kraje/litwa.jpg'}
+						short={'Bogata historia religijna i kulturowa '}
 					>
 						Litwa
 					</CountryShort>

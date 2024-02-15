@@ -6,7 +6,7 @@ import { MdOutlineMailOutline } from 'react-icons/md';
 
 const ContactMap = () => {
 	return (
-		<section className='relative container mx-auto w-[100%] py-5 xl:my-10 px-2 xl:px-5'>
+		<section className='relative container mx-auto w-[100%] py-10 px-2 xl:px-5'>
 			<div className='flex flex-col lg:flex-row'>
 				<div className='xl:w-[50%] flex flex-col items-center lg:items-start font-semibold'>
 					<div className='ml-[1rem] sm:ml-0 mr-2 w-[6rem] sm:w-[7rem] h-auto'>

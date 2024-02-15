@@ -58,29 +58,30 @@ const Offert = () => {
 						</div>
 					</>
 				)}
-				{activeTripsGroup && activeTripsGroup.length > 0 ? (
-					activeTripsGroup.map((trip: any) => (
-						<TripPreview
-							key={
-								trip.acf
-									.unikatowa_nazwa_wycieczki_napisana_z_pauzami
-							}
-							link={`/wyjazd/${trip.acf.unikatowa_nazwa_wycieczki_napisana_z_pauzami}`}
-							imageSrc={trip.acf.zdjecie_glowne}
-							imageAlt={'kościół w licheniu'}
-							dateStart={trip.acf.data_wyjazdu}
-							dateEnd={trip.acf.data_przyjazdu}
-							name={trip.acf.tytuł_wycieczki}
-							short={trip.acf.krotki_opis_na_karcie}
-							price={trip.acf.cena}
-							days={trip.acf.numberOfDays}
-						/>
-					))
-				) : (
-					<p className='absolute text-lg text-center mt-3'>
-						Nie udało się znaleść wycieczek w danej kategorii
-					</p>
-				)}
+				{activeTripsGroup && activeTripsGroup.length > 0
+					? activeTripsGroup.map((trip: any) => (
+							<TripPreview
+								key={
+									trip.acf
+										.unikatowa_nazwa_wycieczki_napisana_z_pauzami
+								}
+								link={`/wyjazd/${trip.acf.unikatowa_nazwa_wycieczki_napisana_z_pauzami}`}
+								imageSrc={trip.acf.zdjecie_glowne}
+								imageAlt={'kościół w licheniu'}
+								dateStart={trip.acf.data_wyjazdu}
+								dateEnd={trip.acf.data_przyjazdu}
+								name={trip.acf.tytuł_wycieczki}
+								short={trip.acf.krotki_opis_na_karcie}
+								price={trip.acf.cena}
+								days={trip.acf.numberOfDays}
+							/>
+					  ))
+					: !isLoading && (
+							<p className='absolute text-lg text-center mt-3'>
+								Nie udało się znaleść wycieczek w danej
+								kategorii
+							</p>
+					  )}
 				{isError && (
 					<div className='mt-3 text-lg'>
 						Nie udało sie pobrać danych na temat wycieczek, spróbuj

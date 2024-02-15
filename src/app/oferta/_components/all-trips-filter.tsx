@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -15,15 +15,34 @@ export const LinkButton2 = ({
 	return (
 		<Link href={link}>
 			{active ? (
-				<motion.button
-					className='bg-second-color px-6 py-3 xl:text-xl font-semibold w-[100vw] lg:w-auto'
-					whileInView={{ scale: 1.05 }}
-					transition={{ duration: 0.6 }}
-				>
+				<motion.button className='bg-second-color py-2 px-4 xl:p-2 2xl:p-3 w-[100vw]  text-sm xl:text-lg font-semibold lg:w-auto'>
 					{children}
 				</motion.button>
 			) : (
-				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm xl:text-lg font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw]  text-sm xl:text-lg font-semibold lg:w-auto hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+					{children}
+				</button>
+			)}
+		</Link>
+	);
+};
+export const LinkButtonCountry = ({
+	children,
+	link,
+	active,
+}: {
+	children: React.ReactNode;
+	link: string;
+	active: boolean;
+}) => {
+	return (
+		<Link href={link}>
+			{active ? (
+				<motion.button className='bg-second-color py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm font-semibold '>
+					{children}
+				</motion.button>
+			) : (
+				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
 					{children}
 				</button>
 			)}
@@ -44,12 +63,14 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 				</h2>
 			</div>
 			<div className='flex flex-col justify-center items-center lg:items-start gap-3'>
-				<LinkButton2
-					link={'/oferta'}
-					active={tripType === null ? true : false}
-				>
-					Pełna oferta 2024!
-				</LinkButton2>
+				<div className='flex gap-5'>
+					<LinkButton2
+						link={'/oferta'}
+						active={tripType === null ? true : false}
+					>
+						Pełna oferta 2024!
+					</LinkButton2>
+				</div>
 				<div className='flex flex-col lg:flex-row gap-3 xl:gap-5 2xl:gap-10'>
 					<LinkButton2
 						link={'/oferta?rodzaj=pielgrzymki'}
@@ -79,6 +100,46 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 					>
 						Wycieczki Na Zamówienie
 					</LinkButton2>
+				</div>
+				<div className='flex flex-col lg:flex-row gap-2'>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Polska'}
+						active={tripType === 'Polska' ? true : false}
+					>
+						Polska
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Chorwacja'}
+						active={tripType === 'Chorwacja' ? true : false}
+					>
+						Chorwacja
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Włochy'}
+						active={tripType === 'Włochy' ? true : false}
+					>
+						Włochy
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Portugalia'}
+						active={tripType === 'Portugalia' ? true : false}
+					>
+						Portugalia
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Litwa'}
+						active={tripType === 'Litwa' ? true : false}
+					>
+						Litwa
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Bośnia i Hercegowina'}
+						active={
+							tripType === 'Bośnia i Hercegowina' ? true : false
+						}
+					>
+						Bośnia i Hercegowina
+					</LinkButtonCountry>
 				</div>
 			</div>
 		</div>
