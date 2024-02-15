@@ -2,7 +2,7 @@
 import React, { Suspense, useMemo, useState } from 'react';
 import TripPreview from '@/components/trip-preview';
 import ContactMap from '../components/contact-map';
-import AllTripsFilter from './components/all-trips-filter';
+import AllTripsFilter from './_components/all-trips-filter';
 import { useSearchParams } from 'next/navigation';
 import { getTrips } from '@/lib/getTrips';
 import { useQuery } from '@tanstack/react-query';
