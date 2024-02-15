@@ -46,7 +46,7 @@ const CountryShort = ({
 const DirectionTrip = () => {
 	return (
 		<section className='relative container mx-auto w-[100%] px-2 xl:px-5'>
-			<div className='flex flex-col justify-between gap-5'>
+			<div className='flex flex-col justify-between gap-5 overflow-hidden'>
 				<motion.div
 					className='flex flex-col gap-3 justify-end border-b-2 border-b-main-color pb-2'
 					initial={{ opacity: 0, translateY: '50px' }}

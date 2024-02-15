@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import ReactQueryProvider from '@/lib/query-provider';
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -29,9 +30,11 @@ export default function RootLayout({
 			<body
 				className={`${poppins.className} bg-main-background overflow-x-hidden`}
 			>
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<ReactQueryProvider>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</ReactQueryProvider>
 			</body>
 		</html>
 	);

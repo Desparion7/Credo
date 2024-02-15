@@ -7,12 +7,19 @@ const Intro = () => {
 		<section className='relative flex bg-black justify-center items-center w-[100%] h-[65vh] sm:h-[65vh] bg-opacity-20'>
 			<Image
 				src='/test4.jpg'
-				alt='Zdjęcie świątyni w Licheniu'
+				alt='Zdjęcie dziewczyny na wyciecze w Rzymie'
 				sizes='100vw'
 				fill
 				priority
 				className='object-cover z-[-3] '
 			/>
+			<a
+				href='https://www.vecteezy.com/free-photos/travel'
+				rel='nofollow'
+				className='hidden'
+			>
+				Mountain Stock photos by Vecteezy
+			</a>
 			<div className='relative flex flex-col justify-center md:items-center h-[65vh] sm:h-[65vh] w-[100%]'>
 				<motion.div
 					className='absolute top-0 uppercase text-end md:text-xl p-2 text-second-color bg-black bg-opacity-60 tracking-wider w-[100%]'

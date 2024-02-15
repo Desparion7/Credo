@@ -44,6 +44,10 @@ const ContactMap = () => {
 						<MdOutlineMailOutline className='text-2xl' />
 						<p className='md:text-lg'>biuro@credokrosno.pl</p>
 					</div>
+					<div className='sm:ml-10'>
+						wpis do rej. Org. Turyst. 057/04
+					</div>
+					<div className='sm:ml-10 mb-5'>NIP 684-21-47-155 </div>
 				</div>
 				<iframe
 					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.35330888936!2d21.75992581512524!3d49.69506307843633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473c4f4b3fe4f8f1%3A0x309f15a56a31804e!2sBiuro%20Pielgrzymkowo%20-%20Turystyczne%20%22CREDO%22!5e0!3m2!1spl!2spl!4v1707827411919!5m2!1spl!2spl'

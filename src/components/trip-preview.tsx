@@ -9,10 +9,11 @@ const TripPreview = ({
 	link,
 	imageSrc,
 	imageAlt,
-	data,
-	name,
+	dateStart,
+	dateEnd,
 	short,
 	price,
+	days,
 }: Trip) => {
 	return (
 		<div className='mt-5 flex flex-col gap-1'>
@@ -35,17 +36,19 @@ const TripPreview = ({
 			</div>
 			<div className='flex mt-2'>
 				<FiCalendar className='text-2xl mr-2' />
-				<p className='xl:text-lg'>02.03.2024 -12.03.2024 (10dni)</p>
+				{dateStart && dateEnd ? (
+					<p className='xl:text-lg'>{`${dateStart}-${dateEnd} (${days} dni)`}</p>
+				) : (
+					<p className='xl:text-lg'>Organizacja na zamówienie</p>
+				)}
 			</div>
 			<Link href={link}>
 				<h3 className='font-semibold text-xl xl:text-2xl underline decoration-second-color decoration-4 underline-offset-4 cursor-pointer hover:text-blue-700'>
 					LICHEŃ - NIEPOKALANÓW
 				</h3>
 			</Link>
-			<p className='text-sm'>
-				Perełka Polskich Pielgrzymek! Polskie duchowe odrodzenie
-			</p>
-			<p className='xl:text-2xl font-semibold'>Cena 480 zł/os.</p>
+			<p className='text-sm'>{short}</p>
+			<p className='xl:text-2xl font-semibold'>{`Cena ${price}.`}</p>
 		</div>
 	);
 };

@@ -1,8 +1,10 @@
 'use client';
-import TripPreview from '@/components/trip-preview';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaArrowRight } from 'react-icons/fa6';
+
+import FetchedTrips from '@/components/fetched-trips';
 
 export const LinkButton = ({
 	children,
@@ -13,7 +15,7 @@ export const LinkButton = ({
 }) => {
 	return (
 		<Link href={link}>
-			<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100%]  text-sm xl:text-lg font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+			<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm xl:text-lg font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
 				{children}
 			</button>
 		</Link>
@@ -23,15 +25,7 @@ export const LinkButton = ({
 const ActualTrip = () => {
 	return (
 		<section className='relative container mx-auto w-[100%] py-10 xl:py-20 px-2 xl:px-5'>
-			<motion.div
-				className='flex flex-col lg:flex-row justify-between  border-b-2 border-b-main-color pb-2'
-				initial={{ opacity: 0, translateY: '50px' }}
-				whileInView={{ opacity: 1, translateY: '0' }}
-				transition={{ ease: 'easeOut', duration: 0.5 }}
-				viewport={{
-					once: true,
-				}}
-			>
+			<div className='flex flex-col lg:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
 				<div className='flex flex-col items-center gap-3 lg:justify-end lg:items-start'>
 					<h2 className='text-xl xl:text-3xl font-semibold'>
 						Aktualne wyjazdy
@@ -43,98 +37,29 @@ const ActualTrip = () => {
 				<div className='flex flex-col justify-center items-center lg:items-start gap-3'>
 					<Link href='/oferta'>
 						<motion.button
-							className='bg-second-color px-6 py-3 mb-2 mt-5 xl:text-xl font-semibold'
+							className='flex items-center justify-center bg-second-color px-6 py-3 mb-2 mt-5 xl:text-xl font-semibold w-[100vw] lg:w-auto'
 							whileHover={{ scale: 1.05 }}
 						>
-							Pełna oferta 2024!
+							Pełna oferta 2024 <FaArrowRight className='ml-2' />
 						</motion.button>
 					</Link>
 					<div className='flex flex-col lg:flex-row gap-3 xl:gap-5 2xl:gap-10'>
 						<LinkButton link={'/oferta?rodzaj=pielgrzymki'}>
 							Pielgrzymki
 						</LinkButton>
-						<LinkButton link={'/oferta?rodzaj=wycieczki-krajowe'}>
-							Wycieczki Krajowe
-						</LinkButton>
-						<LinkButton
-							link={'/oferta?rodzaj=wycieczki-zagraniczne'}
-						>
-							Wycieczki Zagraniczne
+						<LinkButton link={'/oferta?rodzaj=wycieczki-firmowe'}>
+							Wycieczki Firmowe
 						</LinkButton>
 						<LinkButton link={'/oferta?rodzaj=wycieczki-szkolne'}>
 							Wycieczki Szkolne
 						</LinkButton>
+						<LinkButton link={'/oferta?rodzaj=wycieczki-na-zamówienie'}>
+							Wycieczki na zamówienie
+						</LinkButton>
 					</div>
 				</div>
-			</motion.div>
-			<div className='xl:my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-10 justify-items-center'>
-				<TripPreview
-					link={'/oferta/lichen'}
-					imageSrc={'/lichen.jpg'}
-					imageAlt={'kościół w licheniu'}
-					data={'02.03.2024 -12.03.2024 (10dni)'}
-					name={'LICHEŃ - NIEPOKALANÓW'}
-					short={
-						'Perełka Polskich Pielgrzymek! Polskie duchowe odrodzenie'
-					}
-					price={'Cena 480 zł/os.'}
-				/>
-				<TripPreview
-					link={'/oferta/lichen'}
-					imageSrc={'/bazylika.jpg'}
-					imageAlt={'bazylika św. Piotra'}
-					data={'02.10.2024 -02.13.2024 (3dni)'}
-					name={'WŁOCHY - ŚLADAMI ŚWIĘTYCH'}
-					short={
-						'Polskie Sanktuaria: Skarby Wiary i Tradycji! Odkryj duchowe dziedzictwo'
-					}
-					price={'Cena 2370 zł/os.'}
-				/>
-				<TripPreview
-					link={'/oferta/lichen'}
-					imageSrc={'/bazylika.jpg'}
-					imageAlt={'bazylika św. Piotra'}
-					data={'02.10.2024 -02.13.2024 (3dni)'}
-					name={'WŁOCHY - ŚLADAMI ŚWIĘTYCH'}
-					short={
-						'Polskie Sanktuaria: Skarby Wiary i Tradycji! Odkryj duchowe dziedzictwo'
-					}
-					price={'Cena 2370 zł/os.'}
-				/>
-				<TripPreview
-					link={'/oferta/lichen'}
-					imageSrc={'/lichen.jpg'}
-					imageAlt={'kościół w licheniu'}
-					data={'02.03.2024 -12.03.2024 (10dni)'}
-					name={'LICHEŃ - NIEPOKALANÓW'}
-					short={
-						'Perełka Polskich Pielgrzymek! Polskie duchowe odrodzenie'
-					}
-					price={'Cena 480 zł/os.'}
-				/>
-				<TripPreview
-					link={'/oferta/lichen'}
-					imageSrc={'/lichen.jpg'}
-					imageAlt={'kościół w licheniu'}
-					data={'02.03.2024 -12.03.2024 (10dni)'}
-					name={'LICHEŃ - NIEPOKALANÓW'}
-					short={
-						'Perełka Polskich Pielgrzymek! Polskie duchowe odrodzenie'
-					}
-					price={'Cena 480 zł/os.'}
-				/>
-				<TripPreview
-					link={'/oferta/lichen'}
-					imageSrc={'/lichen.jpg'}
-					imageAlt={'kościół w licheniu'}
-					data={'02.03.2024 -12.03.2024 (10dni)'}
-					name={'LICHEŃ - NIEPOKALANÓW'}
-					short={
-						'Perełka Polskich Pielgrzymek! Polskie duchowe odrodzenie'
-					}
-					price={'Cena 480 zł/os.'}
-				/>
 			</div>
+			<FetchedTrips />
 		</section>
 	);
 };
