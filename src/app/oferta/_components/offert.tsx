@@ -74,6 +74,7 @@ const Offert = () => {
 								short={trip.acf.krotki_opis_na_karcie}
 								price={trip.acf.cena}
 								days={trip.acf.numberOfDays}
+								title={trip.acf.tytuł_wycieczki}
 							/>
 					  ))
 					: !isLoading && (
