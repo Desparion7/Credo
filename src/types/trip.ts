@@ -1,4 +1,5 @@
 export type Trip = {
+	title: string;
 	link: string;
 	imageSrc: string;
 	imageAlt: string;

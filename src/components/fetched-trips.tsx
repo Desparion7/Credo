@@ -37,6 +37,7 @@ const FetchedTrips = () => {
 									.unikatowa_nazwa_wycieczki_napisana_z_pauzami
 							}
 							link={`/wyjazd/${trip.acf.unikatowa_nazwa_wycieczki_napisana_z_pauzami}`}
+							title={trip.acf.tytuł_wycieczki}
 							imageSrc={trip.acf.zdjecie_glowne}
 							imageAlt={'kościół w licheniu'}
 							dateStart={trip.acf.data_wyjazdu}

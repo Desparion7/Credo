@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 const TripPreview = ({
 	link,
+	title,
 	imageSrc,
 	imageAlt,
 	dateStart,
@@ -44,7 +45,7 @@ const TripPreview = ({
 			</div>
 			<Link href={link}>
 				<h3 className='font-semibold text-xl xl:text-2xl underline decoration-second-color decoration-4 underline-offset-4 cursor-pointer hover:text-blue-700'>
-					LICHEŃ - NIEPOKALANÓW
+					{title}
 				</h3>
 			</Link>
 			<p className='text-sm'>{short}</p>
