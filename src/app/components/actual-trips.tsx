@@ -15,7 +15,7 @@ export const LinkButton = ({
 }) => {
 	return (
 		<Link href={link}>
-			<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm xl:text-lg font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+			<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] xl:w-auto text-sm font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
 				{children}
 			</button>
 		</Link>
@@ -25,8 +25,8 @@ export const LinkButton = ({
 const ActualTrip = () => {
 	return (
 		<section className='relative container mx-auto w-[100%] py-10 xl:py-20 px-2 xl:px-5'>
-			<div className='flex flex-col lg:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
-				<div className='flex flex-col items-center gap-3 lg:justify-end lg:items-start'>
+			<div className='flex flex-col xl:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
+				<div className='flex flex-col items-center gap-3 xl:justify-end xl:items-start'>
 					<h2 className='text-xl xl:text-3xl font-semibold'>
 						Aktualne wyjazdy
 					</h2>
@@ -34,29 +34,27 @@ const ActualTrip = () => {
 						Odkryj co dla Ciebie przygotowaliśmy
 					</p>
 				</div>
-				<div className='flex flex-col justify-center items-center lg:items-start gap-3'>
+				<div className='flex flex-col xl:flex-row justify-center items-center xl:items-end gap-3'>
 					<Link href='/oferta'>
 						<motion.button
-							className='flex items-center justify-center bg-second-color px-6 py-3 mb-2 mt-5 xl:text-xl font-semibold w-[100vw] lg:w-auto'
+							className='flex items-center justify-center bg-second-color px-6 py-3 mb-2 mt-5 xl:text-xl font-semibold w-[100vw] xl:w-auto'
 							whileHover={{ scale: 1.05 }}
 						>
 							Pełna oferta 2024 <FaArrowRight className='ml-2' />
 						</motion.button>
 					</Link>
-					<div className='flex flex-col lg:flex-row gap-3 xl:gap-5 2xl:gap-10'>
-						<LinkButton link={'/oferta?rodzaj=pielgrzymki'}>
-							Pielgrzymki
-						</LinkButton>
-						<LinkButton link={'/oferta?rodzaj=wycieczki-firmowe'}>
-							Wycieczki Firmowe
-						</LinkButton>
-						<LinkButton link={'/oferta?rodzaj=wycieczki-szkolne'}>
-							Wycieczki Szkolne
-						</LinkButton>
-						<LinkButton link={'/oferta?rodzaj=wycieczki-na-zamówienie'}>
-							Wycieczki na zamówienie
-						</LinkButton>
-					</div>
+					<LinkButton link={'/oferta?rodzaj=pielgrzymki'}>
+						Pielgrzymki
+					</LinkButton>
+					<LinkButton link={'/oferta?rodzaj=wycieczki-firmowe'}>
+						Wycieczki Firmowe
+					</LinkButton>
+					<LinkButton link={'/oferta?rodzaj=wycieczki-szkolne'}>
+						Wycieczki Szkolne
+					</LinkButton>
+					<LinkButton link={'/oferta?rodzaj=wycieczki-na-zamówienie'}>
+						Wycieczki na zamówienie
+					</LinkButton>
 				</div>
 			</div>
 			<FetchedTrips />

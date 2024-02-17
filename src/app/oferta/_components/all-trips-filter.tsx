@@ -15,11 +15,11 @@ export const LinkButton2 = ({
 	return (
 		<Link href={link}>
 			{active ? (
-				<motion.button className='bg-second-color py-2 px-4 xl:p-2 2xl:p-3 w-[100vw]  text-sm xl:text-lg font-semibold lg:w-auto'>
+				<motion.button className='bg-second-color py-2 px-4 xl:p-2 2xl:p-3 w-[100vw]  text-sm font-semibold xl:w-auto'>
 					{children}
 				</motion.button>
 			) : (
-				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw]  text-sm xl:text-lg font-semibold lg:w-auto hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw]  text-sm  font-semibold xl:w-auto hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
 					{children}
 				</button>
 			)}
@@ -38,11 +38,11 @@ export const LinkButtonCountry = ({
 	return (
 		<Link href={link}>
 			{active ? (
-				<motion.button className='bg-second-color py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm font-semibold '>
+				<motion.button className='bg-second-color py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] xl:w-auto text-sm font-semibold '>
 					{children}
 				</motion.button>
 			) : (
-				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] lg:w-auto text-sm font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+				<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] xl:w-auto text-sm font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
 					{children}
 				</button>
 			)}
@@ -52,7 +52,7 @@ export const LinkButtonCountry = ({
 
 const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 	return (
-		<div className='flex flex-col lg:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
+		<div className='flex flex-col xl:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
 			<div className='flex flex-col items-center gap-3 lg:justify-end lg:items-start mb-4'>
 				<h2 className='text-xl xl:text-3xl font-semibold'>
 					{tripType
@@ -62,16 +62,16 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 						: 'Wszystkie wyjazdy'}
 				</h2>
 			</div>
-			<div className='flex flex-col justify-center items-center lg:items-start gap-3'>
-				<div className='flex gap-5'>
-					<LinkButton2
-						link={'/oferta'}
-						active={tripType === null ? true : false}
-					>
-						Pełna oferta 2024!
-					</LinkButton2>
-				</div>
-				<div className='flex flex-col lg:flex-row gap-3 xl:gap-5 2xl:gap-10'>
+			<div className='flex flex-col justify-center items-center xl:items-start gap-3'>
+				<div className='flex flex-col xl:flex-row gap-3 xl:gap-5 2xl:gap-10'>
+					<div className='flex gap-5'>
+						<LinkButton2
+							link={'/oferta'}
+							active={tripType === null ? true : false}
+						>
+							Pełna oferta 2024!
+						</LinkButton2>
+					</div>
 					<LinkButton2
 						link={'/oferta?rodzaj=pielgrzymki'}
 						active={tripType === 'pielgrzymki' ? true : false}
@@ -101,7 +101,7 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 						Wycieczki Na Zamówienie
 					</LinkButton2>
 				</div>
-				<div className='flex flex-col lg:flex-row gap-2'>
+				<div className='flex flex-col xl:flex-row gap-2'>
 					<LinkButtonCountry
 						link={'/oferta?rodzaj=Polska'}
 						active={tripType === 'Polska' ? true : false}

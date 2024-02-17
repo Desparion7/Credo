@@ -22,4 +22,9 @@
 		-webkit-appearance: none;
 		margin: 0;
 	}
+	.slick-track,
+	.slick-list {
+		-webkit-perspective: 2000;
+		-webkit-backface-visibility: hidden;
+	}
 }

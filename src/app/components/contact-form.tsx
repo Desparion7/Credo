@@ -108,7 +108,7 @@ const ContactForm = () => {
 							/>
 							<p className='ml-2 text-[12px] xl:text-sm'>
 								Zgadzam się na przetwarzanie moich danych
-								osobowych przez Biuro pielgrzymkowo turystyczne
+								osobowych przez Biuro Pielgrzymkowo Turystyczne
 								&quot;Credo&quot; S.C. NIP: 6841668923 w celu
 								kontaktu z Tobą na Twoją prośbę zgodnie z
 								polityką prywatności.
