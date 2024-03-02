@@ -14,8 +14,8 @@ export const LinkButton = ({
 	link: string;
 }) => {
 	return (
-		<Link href={link}>
-			<button className='py-2 px-4 xl:p-2 2xl:p-3 w-[100vw] xl:w-auto text-sm font-semibold hover:bg-amber-100 bg-gray-200 transition-all duration-300'>
+		<Link href={link} className='h-full'>
+			<button className='flex items-center justify-center px-6 py-3 text-sm font-semibold w-[100vw] bg-gray-200 xl:w-auto transition-all duration-300 h-full hover:bg-amber-100'>
 				{children}
 			</button>
 		</Link>
@@ -25,7 +25,7 @@ export const LinkButton = ({
 const ActualTrip = () => {
 	return (
 		<section className='relative container mx-auto w-[100%] py-10 xl:py-20 px-2 xl:px-5'>
-			<div className='flex flex-col xl:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
+			<div className='flex flex-col xl:flex-row justify-between items-center border-b-2 border-b-main-color pb-2'>
 				<div className='flex flex-col items-center gap-3 xl:justify-end xl:items-start'>
 					<h2 className='text-xl xl:text-3xl font-semibold'>
 						Aktualne wyjazdy
@@ -34,10 +34,10 @@ const ActualTrip = () => {
 						Odkryj co dla Ciebie przygotowaliśmy
 					</p>
 				</div>
-				<div className='flex flex-col xl:flex-row justify-center items-center xl:items-end gap-3'>
+				<div className='flex flex-col xl:flex-row justify-center items-center  gap-3 h-full'>
 					<Link href='/oferta'>
 						<motion.button
-							className='flex items-center justify-center bg-second-color px-6 py-3 mb-2 mt-5 xl:text-xl font-semibold w-[100vw] xl:w-auto'
+							className='flex items-center justify-center bg-second-color px-6 py-3 xl:text-xl font-semibold w-[100vw] xl:w-auto'
 							whileHover={{ scale: 1.05 }}
 						>
 							Pełna oferta 2024 <FaArrowRight className='ml-2' />

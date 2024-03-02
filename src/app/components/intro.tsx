@@ -98,7 +98,7 @@ const Intro = () => {
 				<div className='relative flex justify-center items-center w-[100%] h-[65vh] sm:h-[65vh]  '>
 					<Image
 						src='/intro2.jpg'
-						alt=''
+						alt='zdjęcie dzieci na wycieczce'
 						sizes='100vw'
 						fill
 						priority
@@ -124,7 +124,7 @@ const Intro = () => {
 				<div className='relative flex  justify-center items-center w-[100%] h-[65vh] sm:h-[65vh] '>
 					<Image
 						src='/intro3.jpg'
-						alt=''
+						alt='zdjęcie turystów'
 						sizes='100vw'
 						fill
 						priority
