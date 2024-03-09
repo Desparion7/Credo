@@ -5,8 +5,8 @@ export type Trip = {
 	imageAlt: string;
 	dateStart?: string;
 	dateEnd?: string;
-	name: string;
-	short: string;
-	price: string;
-	days: number;
+	name?: string;
+	short?: string;
+	price?: string;
+	days?: number;
 };

@@ -24,13 +24,13 @@ export const LinkButton = ({
 
 const ActualTrip = () => {
 	return (
-		<section className='relative container mx-auto w-[100%] py-10 xl:py-20 px-2 xl:px-5'>
+		<section className='relative container mx-auto w-[100%] py-10 xl:py-20 px-2 custom:px-0 xl:px-5'>
 			<div className='flex flex-col xl:flex-row justify-between items-center border-b-2 border-b-main-color pb-2'>
 				<div className='flex flex-col items-center gap-3 xl:justify-end xl:items-start'>
 					<h2 className='text-xl xl:text-3xl font-semibold'>
 						Aktualne wyjazdy
 					</h2>
-					<p className='xl:text-xl'>
+					<p className='xl:text-xl mb-2'>
 						Odkryj co dla Ciebie przygotowaliśmy
 					</p>
 				</div>

@@ -57,7 +57,7 @@ const TripPlan = ({
 	moreInfo: any;
 }) => {
 	return (
-		<div className='my-10'>
+		<div className='my-10 w-[100%]'>
 			<div className='flex flex-col'>
 				<div className='flex items-center gap-2'>
 					<GrDocument className='text-2xl' />
@@ -67,12 +67,12 @@ const TripPlan = ({
 				</div>
 				{Object.values(plan).map(
 					(day: any) =>
-						day.dzien && (
+						day.day && (
 							<DayDescription
-								key={day.dzien}
-								day={day.dzien}
-								title={day.krotki_opis_miejsca}
-								description={day.szczegolowy_opis_miejsca}
+								key={day.day}
+								day={day.day}
+								title={day.place_short_description}
+								description={day.place_detailed_description}
 							/>
 						)
 				)}

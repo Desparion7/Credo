@@ -10,25 +10,26 @@ import { MdChurch } from 'react-icons/md';
 import { FaBus } from 'react-icons/fa';
 import { BsFillBackpackFill } from 'react-icons/bs';
 import { TbBus } from 'react-icons/tb';
+import { toast } from 'react-hot-toast';
 
 const ContactForm = () => {
 	const { control, handleSubmit, reset } = useForm<FormData>();
 
 	const onSubmit: SubmitHandler<FormData> = async (data) => {
 		const url =
-			'https://modezp.com/wp/wp-json/contact-form-7/v1/contact-forms/27/feedback';
+			'https://credo-krosno.pl//wp/wp-json/contact-form-7/v1/contact-forms/71/feedback';
 		try {
 			const result = await sendFormData(data, url);
 			if (result) {
-				// toast.success('Wiadomość została wysłana');
+				toast.success('Wiadomość została wysłana');
 			}
 			reset();
 		} catch (error) {
-			// toast.error('Coś poszło nie tak');
+			toast.error('Coś poszło nie tak');
 		}
 	};
 	return (
-		<section className=' w-100vw bg-main-color mt-5 '>
+		<section className=' w-100vw bg-main-color mt-5 pb-10'>
 			<div className='relative flex flex-col xl:flex-row items-center xl:items-start container mx-auto w-[100%] py-5 xl:mt-10 px-2 xl:px-5 text-second-color'>
 				<div>
 					<h2 className='relative text-2xl xl:text-3xl my-2 font-semibold text-center lg:text-start z-[3]'>

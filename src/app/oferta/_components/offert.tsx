@@ -24,14 +24,14 @@ const Offert = () => {
 			const filteredData = data?.filter((item: any) =>
 				!tripType || tripType.length === 0
 					? true
-					: item.acf.rodzaj.includes(tripType)
+					: item.acf.type.includes(tripType)
 			);
 			setActiveTripsGroup(filteredData);
 		}
 	}, [data, tripType]);
 
 	return (
-		<section className='relative container mx-auto w-[100%] xl:pb-10 px-2 xl:px-5'>
+		<section className='relative container mx-auto w-[100%] xl:pb-10 px-2 custom:px-0 xl:px-5'>
 			<div className='flex justify-center lg:justify-end w-[100%] mb-5'>
 				<div className='inline justify-end bg-main-color text-second-color py-2 mt-5 lg:mt-0 px-4 text-sm lg:text-lg'>
 					<span className='mr-1 md:mr-5'>+(48) 660 731 797</span>{' '}
@@ -41,7 +41,7 @@ const Offert = () => {
 			<Suspense fallback={<div>Loading...</div>}>
 				<AllTripsFilter tripType={tripType} />
 			</Suspense>
-			<div className='xl:my-10 pb-10 xl:pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-10 justify-items-center'>
+			<div className='xl:my-5 sm:grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 2xl:gap-10 justify-items-center'>
 				{isLoading && (
 					<>
 						<div className='mt-5 h-[250px] flex items-center justify-center flex-col gap-1'>
@@ -61,20 +61,17 @@ const Offert = () => {
 				{activeTripsGroup && activeTripsGroup.length > 0
 					? activeTripsGroup.map((trip: any) => (
 							<TripPreview
-								key={
-									trip.acf
-										.unikatowa_nazwa_wycieczki_napisana_z_pauzami
-								}
-								link={`/wyjazd/${trip.acf.unikatowa_nazwa_wycieczki_napisana_z_pauzami}`}
-								imageSrc={trip.acf.zdjecie_glowne}
+								key={trip.acf.unique_name}
+								link={`/wyjazd?wycieczka=${trip.acf.unique_name}`}
+								imageSrc={trip.acf.main_photo}
 								imageAlt={'kościół w licheniu'}
-								dateStart={trip.acf.data_wyjazdu}
-								dateEnd={trip.acf.data_przyjazdu}
-								name={trip.acf.tytuł_wycieczki}
-								short={trip.acf.krotki_opis_na_karcie}
-								price={trip.acf.cena}
-								days={trip.acf.numberOfDays}
-								title={trip.acf.tytuł_wycieczki}
+								dateStart={trip.acf.departure_date}
+								dateEnd={trip.acf.arrival_date}
+								name={trip.acf.title_trip}
+								short={trip.acf.short_description}
+								price={trip.acf.price}
+								days={trip.acf.number_of_days}
+								title={trip.acf.title_trip}
 							/>
 					  ))
 					: !isLoading && (

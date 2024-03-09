@@ -63,15 +63,13 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 				</h2>
 			</div>
 			<div className='flex flex-col justify-center items-center xl:items-start gap-3'>
-				<div className='flex flex-col xl:flex-row gap-3 xl:gap-5 2xl:gap-10'>
-					<div className='flex gap-5'>
+				<div className='flex flex-col xl:flex-row gap-2'>
 						<LinkButton2
 							link={'/oferta'}
 							active={tripType === null ? true : false}
 						>
 							Pełna oferta 2024!
 						</LinkButton2>
-					</div>
 					<LinkButton2
 						link={'/oferta?rodzaj=pielgrzymki'}
 						active={tripType === 'pielgrzymki' ? true : false}
@@ -139,6 +137,30 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 						}
 					>
 						Bośnia i Hercegowina
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Czarnogóra'}
+						active={tripType === 'Czarnogóra' ? true : false}
+					>
+						Czarnogóra
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Czechy'}
+						active={tripType === 'Czechy' ? true : false}
+					>
+						Czechy
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Węgry'}
+						active={tripType === 'Węgry' ? true : false}
+					>
+						Węgry
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Słowacja'}
+						active={tripType === 'Słowacja' ? true : false}
+					>
+						Słowacja
 					</LinkButtonCountry>
 				</div>
 			</div>

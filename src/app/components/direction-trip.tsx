@@ -16,13 +16,13 @@ const CountryShort = ({
 	short: string;
 }) => {
 	return (
-		<div>
-			<div className='relative overflow-hidden'>
+		<div className='w-[250px]'>
+			<div className='relative overflow-hidden w-[250px] h-[200px]'>
 				<motion.div
 					initial={{ scale: 1 }}
 					whileHover={{ scale: 1.2 }}
 					transition={{ duration: 0.3 }}
-					className='min-w-[250px] h-[200px]'
+					className='w-[250px] h-[200px]'
 				>
 					<Link href={link}>
 						<Image
@@ -109,6 +109,36 @@ const DirectionTrip = () => {
 						short={'Bogata historia religijna i kulturowa '}
 					>
 						Litwa
+					</CountryShort>
+					<CountryShort
+						link={'/oferta?rodzaj=Czarnogóra'}
+						imageSrc={'/kraje/czarnogora.jpg'}
+						short={'Perła natury nad Adriatykiem'}
+					>
+						Czarnogóra
+					</CountryShort>
+					<CountryShort
+						link={'/oferta?rodzaj=Czechy'}
+						imageSrc={'/kraje/czechy.jpg'}
+						short={'Krajobrazy, zamki i złote piwo'}
+					>
+						Czechy
+					</CountryShort>
+					<CountryShort
+						link={'/oferta?rodzaj=Słowacja'}
+						imageSrc={'/kraje/słowacja.jpg'}
+						short={'Góry, zamki, jaskinie i termalne jeziora'}
+					>
+						Słowacja
+					</CountryShort>
+					<CountryShort
+						link={'/oferta?rodzaj=Węgry'}
+						imageSrc={'/kraje/węgry.jpg'}
+						short={
+							'Kultura łączy się z historią, winnicami i Dunajem'
+						}
+					>
+						Węgry
 					</CountryShort>
 				</div>
 			</div>

@@ -9,8 +9,9 @@
 		rgb(239, 239, 219),
 		rgb(243, 243, 240) 50%
 	);
-	--main-color: #091952;
+	--main-color: #0c1f64;
 	--second-color: #feca13;
+	--third-color: #85b6ff;
 }
 
 @layer utilities {
@@ -28,3 +29,4 @@
 		-webkit-backface-visibility: hidden;
 	}
 }
+

@@ -17,6 +17,7 @@ const config: Config = {
 			colors: {
 				'main-color': 'var(--main-color)',
 				'second-color': 'var(--second-color)',
+				'third-color': 'var(--third-color)',
 			},
 			screens: {
 				custom: '325px',

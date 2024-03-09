@@ -10,6 +10,7 @@ const FetchedTrips = () => {
 		queryFn: async () => await getTrips(),
 		queryKey: ['trips'],
 	});
+
 	return (
 		<>
 			{isLoading && (
@@ -29,23 +30,20 @@ const FetchedTrips = () => {
 				</div>
 			)}
 			{data && (
-				<div className='xl:my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-10 justify-items-center'>
-					{data?.map((trip: any) => (
+				<div className='xl:my-5 sm:grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 2xl:gap-10 justify-items-center'>
+					{[...data].sort(() => 0.5 - Math.random()).slice(0, 6).map((trip: any) => (
 						<TripPreview
-							key={
-								trip.acf
-									.unikatowa_nazwa_wycieczki_napisana_z_pauzami
-							}
-							link={`/wyjazd/${trip.acf.unikatowa_nazwa_wycieczki_napisana_z_pauzami}`}
-							title={trip.acf.tytuł_wycieczki}
-							imageSrc={trip.acf.zdjecie_glowne}
-							imageAlt={'kościół w licheniu'}
-							dateStart={trip.acf.data_wyjazdu}
-							dateEnd={trip.acf.data_przyjazdu}
-							name={trip.acf.tytuł_wycieczki}
-							short={trip.acf.krotki_opis_na_karcie}
-							price={trip.acf.cena}
-							days={trip.acf.numberOfDays}
+							key={trip.acf.unique_name}
+							link={`/wyjazd?wycieczka=${trip.acf.unique_name}`}
+							title={trip.acf.title_trip}
+							imageSrc={trip.acf.main_photo}
+							imageAlt={'zdjęcie z danej wycieczki'}
+							dateStart={trip.acf.departure_date}
+							dateEnd={trip.acf.arrival_date}
+							name={trip.acf.title_trip}
+							short={trip.acf.short_description}
+							price={trip.acf.price}
+							days={trip.acf.number_of_days}
 						/>
 					))}
 				</div>

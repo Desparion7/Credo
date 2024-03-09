@@ -24,7 +24,7 @@ const Header = () => {
 
 	return (
 		<header
-			className='flex sticky sm:justify-center justify-between w-[100%] h-[12vh] sm:h-[9vh] z-10 top-0 pt-1   bg-white'
+			className='flex sticky sm:justify-center justify-between w-[100%] h-[12vh] sm:h-[9vh] z-10 top-0 pt-1   bg-white border-2 border-b-main-color pb-2'
 		>
 			<motion.nav
 				className='sm:container flex justify-between items-center py-2 w-[100vw]'

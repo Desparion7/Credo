@@ -17,18 +17,19 @@ const TripPreview = ({
 	days,
 }: Trip) => {
 	return (
-		<div className='mt-5 flex flex-col gap-1'>
-			<div className='overflow-hidden cursor-pointer'>
+		<div className='mt-5 flex flex-col gap-1 sm:w-[440px] lg:min-h-[500px]'>
+			<div className='relative overflow-hidden cursor-pointer w-full'>
 				<Link href={link}>
 					<motion.div
 						initial={{ scale: 1 }}
 						whileHover={{ scale: 1.2 }}
 						transition={{ duration: 0.3 }}
+						className='relative w-full h-[300px]'
 					>
 						<Image
 							src={imageSrc}
-							width={500}
-							height={700}
+							layout='fill'
+							objectFit='cover'
 							alt={imageAlt}
 							className='cursor-pointer'
 						/>
@@ -49,7 +50,7 @@ const TripPreview = ({
 				</h3>
 			</Link>
 			<p className='text-sm'>{short}</p>
-			<p className='xl:text-2xl font-semibold'>{`Cena ${price}.`}</p>
+			<p className='xl:text-2xl font-semibold'>{`${price}.`}</p>
 		</div>
 	);
 };
