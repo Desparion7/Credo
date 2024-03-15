@@ -55,7 +55,7 @@ const Intro = () => {
 					/>
 					<a
 						href='https://www.vecteezy.com/free-photos/travel'
-						rel='nofollow'
+						rel='noopener noreferrer'
 						className='hidden'
 					>
 						Mountain Stock photos by Vecteezy
@@ -132,7 +132,7 @@ const Intro = () => {
 					/>
 					<a
 						href='https://www.vecteezy.com/free-photos/travel'
-						rel='nofollow'
+						rel='noopener noreferrer'
 						className='hidden'
 					>
 						Mountain Stock photos by Vecteezy

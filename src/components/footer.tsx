@@ -54,6 +54,7 @@ const Footer = () => {
 						Strona wykonana przez firme Modezp{' '}
 						<a
 							href='https://www.modezp.com/'
+							target='_blank' rel='noopener noreferrer'
 							className='underline hover:text-white'
 						>
 							www.modezp.com

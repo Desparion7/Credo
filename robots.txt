@@ -1,4 +1,3 @@
 User-Agent: *
-Allow: /
-Disallow: 
-Sitemap: https://acme.com/sitemap.xml
+Disallow:
+Sitemap: https://credo-krosno.pl/sitemap.xml

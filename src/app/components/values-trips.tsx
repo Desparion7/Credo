@@ -24,7 +24,7 @@ const ValuesTrips = () => {
 						width={669}
 						height={522}
 						alt='symbol duchowosći'
-						className='w-[14rem] xl:min-w-[18rem]'
+						className='w-[14rem] xl:min-w-[15rem]'
 					/>
 					<p className='lg:hidden xl:text-lg mb-5'>
 						<span className='font-semibold'>Duchowość</span> - firma
@@ -50,7 +50,7 @@ const ValuesTrips = () => {
 						width={669}
 						height={522}
 						alt='symbol doświadczenia'
-						className='w-[14rem] xl:min-w-[18rem]'
+						className='w-[14rem] xl:min-w-[15rem]'
 					/>
 					<p className='lg:hidden xl:text-lg mb-5'>
 						<span className='font-semibold'>Doświadczenie</span> -
@@ -77,7 +77,7 @@ const ValuesTrips = () => {
 						width={669}
 						height={522}
 						alt='symbol wsparcia'
-						className='w-[14rem] xl:min-w-[18rem]'
+						className='w-[14rem] xl:min-w-[15rem]'
 					/>
 					<p className='lg:hidden xl:text-lg mb-5'>
 						<span className='font-semibold'>Wsparcie</span> - Biuro

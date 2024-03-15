@@ -134,7 +134,7 @@ const ContactForm = () => {
 						src='/biuro.jpg'
 						width={595}
 						height={392}
-						alt='symbol duchowosći'
+						alt='zdjecie wejścia do biura CREDO'
 						className='border-2 border-white z-[3]'
 					/>
 				</div>
