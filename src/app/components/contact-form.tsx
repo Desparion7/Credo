@@ -17,7 +17,7 @@ const ContactForm = () => {
 
 	const onSubmit: SubmitHandler<FormData> = async (data) => {
 		const url =
-			'https://credo-krosno.pl//wp/wp-json/contact-form-7/v1/contact-forms/71/feedback';
+			'https://credotravel.pl//wp/wp-json/contact-form-7/v1/contact-forms/79/feedback';
 		try {
 			const result = await sendFormData(data, url);
 			if (result) {
@@ -110,7 +110,7 @@ const ContactForm = () => {
 							<p className='ml-2 text-[12px] xl:text-sm'>
 								Zgadzam się na przetwarzanie moich danych
 								osobowych przez Biuro Pielgrzymkowo Turystyczne
-								&quot;Credo&quot; S.C. NIP: 6841668923 w celu
+								&quot;Credo&quot; S.C. w celu
 								kontaktu z Tobą na Twoją prośbę zgodnie z
 								polityką prywatności.
 							</p>
@@ -129,7 +129,7 @@ const ContactForm = () => {
 						</div>
 					</form>
 				</div>
-				<div className='relative w-100% pt-10 xl:right-40 z-[3]'>
+				{/* <div className='relative w-100% pt-10 xl:right-40 z-[3]'>
 					<Image
 						src='/biuro.jpg'
 						width={595}
@@ -137,7 +137,7 @@ const ContactForm = () => {
 						alt='zdjecie wejścia do biura CREDO'
 						className='border-2 border-white z-[3]'
 					/>
-				</div>
+				</div> */}
 				<FaUmbrellaBeach className='absolute text-second-color text-5xl right-[20px] opacity-10 rotate-12' />
 				<TbBus className='absolute text-second-color text-7xl right-[20px] bottom-[40%] opacity-10 rotate-12' />
 				<FaBus className='absolute text-second-color text-6xl left-[-60px] top-[250px]  sm:top-[100px] opacity-10 rotate-12' />

@@ -14,27 +14,29 @@ const Trip = () => {
 	const searchParams = useSearchParams();
 	const trip = searchParams.get('wycieczka');
 
-	const [currentTrip, setCurrentTrip] = useState<any>();
+	// const [currentTrip, setCurrentTrip] = useState<any>();
 	const { data, isLoading, isError } = useQuery({
 		queryFn: async () => await getTrips(),
 		queryKey: ['trips'],
 	});
 
-	useMemo(() => {
-		if (data) {
-			const selectedData = data?.find(
-				(item: any) => item.acf.unique_name === trip
-			);
-			setCurrentTrip(selectedData);
-		}
-	}, [data, trip]);
+	// useMemo(() => {
+	// 	if (data) {
+	// 		const selectedData = data?.find(
+	// 			(item: any) => item.acf.unique_name === trip
+	// 		);
+	// 		setCurrentTrip(selectedData);
+	// 	}
+	// }, [data, trip]);
+	const currentTrip = data?.find(
+		(item: any) => item.acf.unique_name === trip
+	);
 
 	return (
 		<section className='relative container custom:mx-auto w-[100%] xl:pb-10 sm:px-2 xl:px-5'>
 			<div className='flex justify-center lg:justify-end w-[100%] mb-5'>
 				<div className='inline justify-end bg-main-color text-second-color py-2 mt-5 lg:mt-0 px-4 text-sm lg:text-lg'>
-					<span className='mr-1 md:mr-5'>+(48) 660 731 797</span>{' '}
-					<span>+(48) 13 43 661 20</span>
+					<span className='mr-1 md:mr-5'>+(48) 660 731 797</span>
 				</div>
 			</div>
 			{isLoading && (

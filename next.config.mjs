@@ -6,7 +6,7 @@ const nextConfig = {
 		loaderFile: './my-loader.ts',
 	},
 	// images: {
-	// 	domains: ['credo-krosno.pl'],
+	// 	domains: ['credotravel.pl'],
 	// },
 };
 

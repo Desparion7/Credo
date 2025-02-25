@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaMobileScreen } from 'react-icons/fa6';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -42,8 +41,9 @@ const Footer = () => {
 					</div>
 					<div className='flex flex-col mb-5'>
 						<p className='font-semibold text-xl mb-2'>Kontakt</p>
-						<p>Telefon: +48 13 43 661 20</p>
+						<p>Email: biuro@credotravel.pl</p>
 						<p>Telefon: +48 660 731 797</p>
+						<p>Telefon: +48 884 829 900</p>
 					</div>
 				</div>
 			</div>
@@ -54,7 +54,8 @@ const Footer = () => {
 						Strona wykonana przez firme Modezp{' '}
 						<a
 							href='https://www.modezp.com/'
-							target='_blank' rel='noopener noreferrer'
+							target='_blank'
+							rel='noopener noreferrer'
 							className='underline hover:text-white'
 						>
 							www.modezp.com

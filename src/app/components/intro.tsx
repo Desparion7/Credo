@@ -77,8 +77,10 @@ const Intro = () => {
 							<p className='mt-2 md:container md:mx-auto md:px-5 text-sm md:text-lg text-center md:text-end'>
 								<span className='mr-1 md:mr-5'>
 									+(48) 660 731 797
-								</span>{' '}
-								<span>+(48) 13 43 661 20</span>
+								</span>
+								<span className='mr-1 md:mr-5'>
+									+(48) 884 829 900
+								</span>
 							</p>
 						</motion.div>
 						<motion.p
@@ -113,7 +115,9 @@ const Intro = () => {
 								<span className='mr-1 md:mr-5'>
 									+(48) 660 731 797
 								</span>{' '}
-								<span>+(48) 13 43 661 20</span>
+								<span className='mr-1 md:mr-5'>
+									+(48) 884 829 900
+								</span>
 							</p>
 						</div>
 						<p className='absolute bottom-0 flex justify-center text-sm md:text-lg lg:text-xl xl:text-4xl font-semibold text-center p-4 text-second-color bg-black bg-opacity-60 tracking-wider w-[100%] uppercase '>
@@ -146,7 +150,9 @@ const Intro = () => {
 								<span className='mr-1 md:mr-5'>
 									+(48) 660 731 797
 								</span>{' '}
-								<span>+(48) 13 43 661 20</span>
+								<span className='mr-1 md:mr-5'>
+									+(48) 884 829 900
+								</span>
 							</p>
 						</div>
 						<p className='absolute bottom-0 flex justify-center text-sm md:text-lg lg:text-xl xl:text-4xl font-semibold text-center p-4 text-second-color bg-black bg-opacity-60 tracking-wider w-[100%] uppercase '>

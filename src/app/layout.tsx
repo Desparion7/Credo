@@ -25,15 +25,15 @@ export const metadata: Metadata = {
 	},
 	keywords:
 		'pielgrzymki, wycieczki duchowe, turystyka religijna, święte miejsca, kulturowe odkrycia, indywidualne pielgrzymki, grupowe wycieczki, wycieczki szkolne, pielgrzymki zagraniczne, chrześcijańskie podróże, duchowa podróż',
-	metadataBase: new URL('https://credo-krosno.pl'),
+	metadataBase: new URL('https://credotravel.pl'),
 	openGraph: {
 		title: 'Biuro Pielgrzymkowo-Turystyczne Credo | Wycieczki i Pielgrzymki',
 		description:
 			'Odkryj niezapomniane pielgrzymki i wycieczki z Biurem Pielgrzymkowo-Turystycznym Credo. Indywidualnie dostosowane oferty dla niezwykłych duchowych i kulturowych odkryć.',
-		url: 'https://credo-krosno.pl',
+		url: 'https://credotravel.pl',
 		images: [
 			{
-				url: 'https://credo-krosno.pl/opengraph-image.jpg',
+				url: 'https://credotravel.pl/opengraph-image.jpg',
 				width: 1200,
 				height: 510,
 			},

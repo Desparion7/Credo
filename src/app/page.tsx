@@ -17,8 +17,8 @@ export default function Home() {
 						'@context': 'https://schema.org',
 						'@type': 'Biuro pielgrzymkowo-turystyczne',
 						name: 'Biuro Pielgrzymkowo-Turystyczne Credo',
-						image: 'https://credo-krosno.pl/logo.png',
-						url: 'https://credo-krosno.pl/',
+						image: 'https://credotravel.pl/logo.png',
+						url: 'https://credotravel.pl/',
 						telephone: '+48-660-731-797',
 						openingHoursSpecification: [
 							{

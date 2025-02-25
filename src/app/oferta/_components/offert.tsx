@@ -12,31 +12,37 @@ const Offert = () => {
 	const searchParams = useSearchParams();
 	const tripType = searchParams.get('rodzaj');
 
-	const [activeTripsGroup, setActiveTripsGroup] = useState<any>();
+	// const [activeTripsGroup, setActiveTripsGroup] = useState<any>();
 
 	const { data, isLoading, isError } = useQuery({
 		queryFn: async () => await getTrips(),
 		queryKey: ['trips'],
 	});
 
-	useMemo(() => {
-		if (data) {
-			const filteredData = data?.filter((item: any) =>
-				!tripType || tripType.length === 0
-					? true
-					: item.acf.type.includes(tripType)
-			);
-			setActiveTripsGroup(filteredData);
-		}
-	}, [data, tripType]);
+	// useMemo(() => {
+	// 	if (data) {
+	// 		const filteredData = data?.filter((item: any) =>
+	// 			!tripType || tripType.length === 0
+	// 				? true
+	// 				: item.acf.type.includes(tripType)
+	// 		);
+	// 		setActiveTripsGroup(filteredData);
+	// 	}
+	// }, [data, tripType]);
+
+	const activeTripsGroup = data?.filter((item: any) =>
+		!tripType || tripType.length === 0
+			? true
+			: item.acf.type.includes(tripType)
+	);
 
 	return (
 		<section className='relative container mx-auto w-[100%] xl:pb-10 px-2 custom:px-0 xl:px-5'>
 			<div className='flex justify-center lg:justify-end w-[100%] mb-5'>
 				<div className='inline justify-end bg-main-color text-second-color py-2 mt-5 lg:mt-0 px-4 text-sm lg:text-lg'>
 					<span className='mr-1 md:mr-5'>+(48) 660 731 797</span>{' '}
-					<span>+(48) 13 43 661 20</span>
 				</div>
+
 			</div>
 			<Suspense fallback={<div>Loading...</div>}>
 				<AllTripsFilter tripType={tripType} />

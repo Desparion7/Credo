@@ -15,7 +15,6 @@ const page = () => {
 						niezapomnianych przygód, podróży, ekspedycji i
 						pielgrzymek dla klientów indywidualnych, zorganizowanych
 						grup, edukacyjnych instytucji oraz osób duchownych.
-
 					</p>
 					<p className=' xl:text-lg leading-7'>
 						Naszą misją jest kreowanie niezapomnianych doświadczeń
@@ -29,7 +28,7 @@ const page = () => {
 						wypoczynkiem, ale również inspirującą podróżą odkrywczą.
 						Naszym celem jest, abyś podróżując z nami, mógł nie
 						tylko odpocząć, ale również przeżyć coś wyjątkowego, co
-						zostanie z Tobą na długo po powrocie do domu. 
+						zostanie z Tobą na długo po powrocie do domu.
 					</p>
 				</div>
 				<div className='xl:w-[50%]'>

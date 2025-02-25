@@ -7,7 +7,7 @@ export default function cloudinaryLoader({
 	width: number;
 	quality?: number;
 }) {
-	const baseUrl = 'https://credo-krosno.pl/';
+	const baseUrl = 'https://credotravel.pl/';
 	const params = [
 		'f_auto',
 		'c_limit',

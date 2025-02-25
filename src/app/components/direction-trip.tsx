@@ -83,6 +83,13 @@ const DirectionTrip = () => {
 						Włochy
 					</CountryShort>
 					<CountryShort
+						link={'/oferta?rodzaj=Francja'}
+						imageSrc={'/kraje/francja.jpg'}
+						short={'Romantyzm, wino, sztuka i elegancja!'}
+					>
+						Francja
+					</CountryShort>
+					<CountryShort
 						link={'/oferta?rodzaj=Chorwacja'}
 						imageSrc={'/kraje/chorwacja.jpg'}
 						short={'Starożyte katedry, średniowieczne kościoły'}

@@ -1,3 +1,3 @@
 User-Agent: *
 Disallow:
-Sitemap: https://credo-krosno.pl/sitemap.xml
+Sitemap: https://credotravel.pl/sitemap.xml

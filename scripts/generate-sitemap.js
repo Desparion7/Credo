@@ -15,7 +15,7 @@ ${pages
 	.map(
 		(page) =>
 			`<url>
-  <loc>${`https://credo-krosno.pl${page}`}</loc>
+  <loc>${`https://credotravel.pl${page}`}</loc>
 </url>`
 	)
 	.join('')}

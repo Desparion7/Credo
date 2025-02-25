@@ -51,6 +51,7 @@ export const LinkButtonCountry = ({
 };
 
 const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
+	const currentYear = new Date().getFullYear();
 	return (
 		<div className='flex flex-col xl:flex-row justify-between  border-b-2 border-b-main-color pb-2'>
 			<div className='flex flex-col items-center gap-3 lg:justify-end lg:items-start mb-4'>
@@ -64,12 +65,12 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 			</div>
 			<div className='flex flex-col justify-center items-center xl:items-start gap-3'>
 				<div className='flex flex-col xl:flex-row gap-2'>
-						<LinkButton2
-							link={'/oferta'}
-							active={tripType === null ? true : false}
-						>
-							Pełna oferta 2024!
-						</LinkButton2>
+					<LinkButton2
+						link={'/oferta'}
+						active={tripType === null ? true : false}
+					>
+						Pełna oferta {currentYear}!
+					</LinkButton2>
 					<LinkButton2
 						link={'/oferta?rodzaj=pielgrzymki'}
 						active={tripType === 'pielgrzymki' ? true : false}
@@ -155,6 +156,12 @@ const AllTripsFilter = ({ tripType }: { tripType: string | null }) => {
 						active={tripType === 'Węgry' ? true : false}
 					>
 						Węgry
+					</LinkButtonCountry>
+					<LinkButtonCountry
+						link={'/oferta?rodzaj=Francja'}
+						active={tripType === 'Francja' ? true : false}
+					>
+						Francja
 					</LinkButtonCountry>
 					<LinkButtonCountry
 						link={'/oferta?rodzaj=Słowacja'}

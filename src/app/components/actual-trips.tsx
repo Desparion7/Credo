@@ -23,6 +23,7 @@ export const LinkButton = ({
 };
 
 const ActualTrip = () => {
+	const currentYear = new Date().getFullYear();
 	return (
 		<section className='relative container mx-auto w-[100%] py-10 xl:py-20 px-2 custom:px-0 xl:px-5'>
 			<div className='flex flex-col xl:flex-row justify-between items-center border-b-2 border-b-main-color pb-2'>
@@ -40,7 +41,7 @@ const ActualTrip = () => {
 							className='flex items-center justify-center bg-second-color px-6 py-3 xl:text-xl font-semibold w-[100vw] xl:w-auto'
 							whileHover={{ scale: 1.05 }}
 						>
-							Pełna oferta 2024 <FaArrowRight className='ml-2' />
+							Pełna oferta {currentYear} <FaArrowRight className='ml-2' />
 						</motion.button>
 					</Link>
 					<LinkButton link={'/oferta?rodzaj=pielgrzymki'}>
